@@ -6,5 +6,5 @@ dist
 node_modules
 package-lock.json
 gulp/version.json
-src/static/promo.mp4
-src/static/stroitelstvo.mp4
+# src/static/promo.mp4
+# src/static/stroitelstvo.mp4
