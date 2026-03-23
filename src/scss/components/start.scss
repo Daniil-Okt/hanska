@@ -1,0 +1,121 @@
+.start {
+
+		&__list {
+            @include adaptiveClamp(margin-bottom, 34, 20);
+		}
+
+		&__list-title {
+            letter-spacing: -0.03em;
+            @include adaptiveClamp(font-size, 16, 13);
+            font-weight: 500;
+            margin-bottom: rem(7);
+		}
+
+		&__bot {
+            position: relative;
+
+            .sq {
+                position: absolute;
+                @include adaptiveClamp(top, 4, 3);
+                @include adaptiveClamp(left, -27, -15);
+            }
+		}
+
+		&__bot-title {
+            @include adaptiveClamp(font-size, 38, 24);
+            @include adaptiveClamp(margin-bottom, 9, 7);
+            letter-spacing: -0.04em;
+            color: var(--t-color);
+            text-transform: uppercase;
+		}
+
+		&__items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            @include adaptiveClamp(row-gap, 16, 10);
+            column-gap: rem(13);
+		}
+
+		&__item {
+		}
+
+		&__item-num {
+            color: #2e2e2e;
+            margin-bottom: rem(5);
+            letter-spacing: -0.04em;
+            font-size: rem(8);
+		}
+
+		&__text {
+            color: var(--t-color);
+            @include adaptiveClamp(font-size, 14, 12);
+            font-weight: 500;
+            letter-spacing: -0.02em;
+		}
+
+        .dream__body {
+            
+            @media(max-width:768px){
+                flex-direction: column;
+            }
+        }
+
+        .dream__row {
+            // @include adaptiveClamp(padding-right, 70, 10);
+            @media(max-width:450px){
+                padding-right: rem(10) !important;
+            }
+        }
+
+        .item-life {
+            &__bot {
+                li {
+                    line-height: 100%;
+                    color: #656565;
+                    &::before {
+                        color: #656565;
+                    }
+                }
+            }
+        }
+        .dream__row {
+            max-width: rem(592);
+        }
+        .fix__img {
+            position: relative;
+            z-index: 2;
+            display: block;
+            max-width: rem(522);
+            max-height: 100%;
+
+            @media(max-width:768px){
+                @include adaptiveClamp(margin-left, -44, -22);
+                max-width: unset;
+                width: auto;
+                @include adaptiveClamp(height, 500, 400);
+            }
+        }
+
+        
+
+        .forms-mot {
+            @include adaptiveClamp(left, 50, 10);
+            @include adaptiveClamp(right, 50, 10);
+            @include adaptiveClamp(bottom, 28, 20);
+            @include adaptiveClamp(padding-left, 15.5, 10);
+            @include adaptiveClamp(padding-right, 17.5, 14);
+            max-width: rem(425);
+            width: auto;
+
+            &__title {
+                font-size: rem(16);
+
+                @media(max-width:450px){
+                    font-size: rem(22);
+                }
+            }
+        }
+}
+
+.font-2 {
+}

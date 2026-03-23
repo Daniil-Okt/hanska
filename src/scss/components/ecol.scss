@@ -1,0 +1,114 @@
+.ecol { 
+    position: relative;
+    
+
+		&__container {
+		}
+
+        &__content {
+            position: relative;
+            @include adaptiveClamp(padding-top, 53, 31);
+            @include adaptiveClamp(padding-bottom, 53, 31);
+        }
+
+		&__body {
+            position: relative;
+            z-index: 2;
+            @include adaptiveClamp(padding-top, 40, 23);
+            @include adaptiveClamp(padding-bottom, 40, 23);
+            @include adaptiveClamp(padding-left, 40, 10);
+            @include adaptiveClamp(padding-right, 40, 10);
+            background-color: var(--white-color);
+            @include adaptiveClamp(border-radius, 5, 4);
+            max-width: rem(512);
+            margin-left: auto;
+            margin-right: auto;
+		}
+
+		&__head {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+		}
+
+		&__title {
+		}
+
+		&__text {
+		}
+
+
+        .bs-head {
+            margin-bottom: 0;
+
+            &__left {
+                @include adaptiveClamp(margin-bottom, 21, 15);
+            }
+
+            &__right {
+            }
+
+            &__title {
+                @include adaptiveClamp(margin-bottom, 6, 3);
+            }
+
+            &__text {
+                @include adaptiveClamp(margin-bottom, 21, 13);
+                @include adaptiveClamp(font-size, 15, 12);
+            }
+        }
+
+        .item-life__bot {
+            @include adaptiveClamp(margin-bottom, 24, 19);
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            li {
+                width: max-content;
+                @include adaptiveClamp(font-size, 14, 12);
+            }
+        }
+
+        &__bot-title {
+            @include adaptiveClamp(margin-bottom, 17, 15);
+            letter-spacing: -0.04em;
+            text-transform: uppercase;     
+            @include adaptiveClamp(font-size, 32, 25);
+            color: var(--t-color); 
+        }
+
+        &__items {
+            max-width: rem(328);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            gap: rem(10);
+            padding-left: rem(7);
+            padding-right: rem(7);
+        }
+
+        &__item {
+            text-align: center;
+        }
+
+        &__item-num {
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
+            @include adaptiveClamp(font-size, 29, 28);
+            color: var(--t-color);
+        }
+
+        &__item-text {
+            letter-spacing: -0.02em;
+            font-size: rem(12);
+        }
+
+}
+
+.m-b {
+}
+.bs-title {
+}

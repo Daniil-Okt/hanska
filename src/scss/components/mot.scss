@@ -1,0 +1,275 @@
+.mot {
+
+		&__container {
+		}
+
+		&__head {
+            &.bs-head {
+                @include adaptiveClamp(margin-bottom, 14, 10.5);
+            }
+            .bs-head {
+                &__left {
+                    @media(min-width:576px){
+                        p {
+                            max-width: rem(80);
+                        }
+                    }
+                }
+
+                &__right {
+                }
+            }
+		}
+
+        &__title {
+            @media(max-width:575px){
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: rem(5);
+            }
+            .year {
+                display: inline-flex;
+                align-items: start;
+                line-height: 1;
+            }
+            span.number {
+                @include adaptiveClamp(font-size, 37, 21);
+            }
+            span.text {
+                @include adaptiveClamp(font-size, 15, 8);
+                line-height: 1;
+                @include adaptiveClamp(margin-top, 2, 1.5);
+                @include adaptiveClamp(padding-left, 8.4, 4);
+                letter-spacing: -0.02em;
+                text-align: left;
+            }
+        }
+
+        &__line {
+            position: relative;
+            .str {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-54%);
+                right: 0;
+                width: 100%;
+                @include adaptiveClamp(height, 20, 11.6);
+                z-index: 1;
+                img {
+                    position: relative;
+                    @include adaptiveClamp(width, 20, 11.6);
+                    @include adaptiveClamp(height, 20, 11.6);
+                    transition: all 0.6s ease  0s !important;
+
+                    &[data-aos=fade-right] {
+                        transform: translate3d(0, 0, 0);
+                        left: rem(10);
+                    }
+
+                    &.aos-init.aos-animate[data-aos=fade-right] {
+                        @include adaptiveClamp(left, 868, 239);
+                    }
+                }
+            }
+        }
+
+
+		&__video {
+            position: relative;
+            overflow: hidden;
+            min-height: rem(348);
+            @include adaptiveClamp(margin-top, 16, 9);
+
+            img {
+                min-height: rem(348);
+            }
+            @media(max-width:575px){
+                min-height: rem(420);
+
+                img {
+                    min-height: rem(420);
+                }
+            }
+            .video-icon {
+                position: absolute;
+
+                @media(max-width:1100px) and (min-width: 576px){
+                    @include adaptiveClamp(width, 780, 110);
+                }
+
+                @media(max-width:575px){
+                    height: 39%;
+                }
+            }
+
+
+		}
+
+		&__forms {
+
+		}
+}
+
+
+
+.mot {
+
+		&__forms {
+		}
+}
+
+
+.forms-mot {
+    position: absolute;
+    right: rem(20);
+    bottom: rem(20);
+    @include adaptiveClamp(max-width, 414, 300);
+    width: 100%;
+    z-index: 2;
+    border-radius: 4px;
+    background-color: var(--white);
+    @include adaptiveClamp(padding-left, 14, 10);
+    @include adaptiveClamp(padding-right, 47.9, 24.7);
+    padding-top: rem(17.5);
+    @include adaptiveClamp(padding-bottom, 15.7, 13);
+    background-color: var(--white-color);
+
+
+    @media(max-width:620px){
+        right: rem(10);
+        bottom: rem(10);
+    }
+    @media(max-width:575px){
+        left: rem(10);
+        max-width: none !important;
+        width: auto;
+    }
+
+    &__title {
+        letter-spacing: -0.02em;
+        color: var(--t-color);
+        // @include adaptiveClamp(font-size, 20, 15);
+        font-size: rem(22);
+        font-weight: 500;
+        // @include adaptiveClamp(margin-bottom, 7, 3);
+        margin-bottom: rem(7);
+
+        // @media(max-width:450px){
+        //     font-size: rem(21);
+        // }
+    }
+
+    &__text {
+        letter-spacing: -0.03em;
+        // @include adaptiveClamp(font-size, 12, 8);
+
+        @include adaptiveClamp(font-size, 14, 13);
+        // @include adaptiveClamp(margin-bottom, 16.4, 12);
+        margin-bottom: rem(16.4);
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include adaptiveClamp(gap, 8.36, 6);
+
+        margin-bottom: rem(11);
+
+        @media(max-width:450px){
+            grid-template-columns: 1fr;
+            @include adaptiveClamp(gap, 1, 10);
+        }
+    }
+
+    &__btn {
+        @include adaptiveClamp(margin-top, 15, 13);
+        @include adaptiveClamp(max-width, 138.25, 131);
+        font-size: rem(11);
+        width: 100%;
+        @include adaptiveClamp(padding-top, 8.5, 8);
+        @include adaptiveClamp(padding-bottom, 10.5, 10);
+    }
+}
+
+
+
+.items-input-row {
+}
+.item-input {
+
+    &__input {
+        @include adaptiveClamp(height, 38, 30);
+        border-bottom: rem(0.8) solid rgba(101, 101, 101, 0.3);
+        transition: all 0.3s ease  0s;
+        display: flex;
+        align-items: center;
+        font-size: rem(11);
+        width: 100%;
+        &._error._obligat {
+            border-color: red;
+        }
+
+        &._ok {
+            border-color: green;
+        }
+
+        &::placeholder {
+            opacity: 0.89;
+        }
+        
+        @media(max-width:575px){
+            font-size: rem(16);
+        }
+    }
+}
+
+.check-politic {
+    
+    font-size: rem(10);
+    display: flex;
+    gap: rem(8.5);
+    max-width: rem(255);
+
+    &__input {
+        display: none;
+
+        &:checked + span {
+            // border-color: #000;
+
+            &::before {
+                opacity: 1;
+            }
+        }
+        &._error + span {
+            border-color: red;
+        }
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: rem(2);
+        width: rem(11);
+        min-width: rem(11);
+        height: rem(12);
+        border: rem(1) solid #656565;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: rem(11);
+            min-width: rem(11);
+            height: rem(12);
+            background: url(@img/check-icon.svg) no-repeat center center / contain;
+            top:50%;
+            left: 53%;
+            transform: translateX(-50%) translateY(-50%);
+            transition: all 0.1s ease  0s;
+            opacity: 0;
+        }
+    }
+
+    &__text {
+    }
+}
+

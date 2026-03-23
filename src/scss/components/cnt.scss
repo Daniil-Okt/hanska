@@ -1,0 +1,143 @@
+.cnt {
+
+    &__row {
+        display: flex;
+        @include adaptiveClamp(gap, 14, 12);
+        @media(max-width:768px){
+            flex-direction: column;
+        }
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveClamp(gap, 14, 12);
+        max-width: rem(587);
+        width: 100%;
+
+        @media(max-width:768px){
+            max-width: 100%;
+        }
+    }
+
+
+}
+
+.item-cnt {
+    flex-direction: row;
+    gap: rem(10);
+    min-height: 0 !important;
+
+    @media(max-width:870px){
+        flex-direction: column;
+    }
+    &__left {
+        max-width: rem(330);
+        width: 100%;
+    }
+
+    .item-life__icon img {
+        @include adaptiveClamp(width, 31, 18);
+        @include adaptiveClamp(height, 31, 18);
+        @include adaptiveClamp(margin-bottom, 16, 9.3);
+    }
+
+    .item-life__title {
+        @include adaptiveClamp(font-size, 25, 15);
+        @include adaptiveClamp(margin-bottom, 14, 8);
+    }
+
+    .item-life__text {
+        margin-bottom: 0 !important;
+        @include adaptiveClamp(font-size, 16, 12);
+    }
+    .item-life__bot {
+        @include adaptiveClamp(font-size, 14, 12);
+        // width: 100%;
+        &.m-t {
+            @media(min-width:871px){
+                @include adaptiveClamp(margin-top, 45, 30);
+            }
+        }
+        p {
+            max-width: 100%;
+            @include adaptiveClamp(margin-top, 11, 8.5);
+        }
+
+        ul {
+            @include adaptiveClamp(min-width, 205, 140);
+        }
+    }
+
+    &__logo {
+        position: relative;
+        @include adaptiveClamp(margin-top, 17, 9.6);
+        display: flex;
+        align-items: center;
+        @include adaptiveClamp(gap, 19, 11);
+
+        img {
+            @include adaptiveClamp(height, 21.56, 12.5);
+        }   
+    }
+}
+
+
+.form-cnt {
+
+    &.item-life {
+        color: var(--white-color);
+        width: 100%;
+        max-width: rem(558);
+        @include adaptiveClamp(padding-bottom, 41, 17);
+        @include adaptiveClamp(padding-left, 19, 11);
+        @include adaptiveClamp(padding-right, 70, 66);
+        @include adaptiveClamp(padding-top, 41, 25.3);
+
+
+        @media(max-width:768px){
+            max-width: 100%;
+        }
+    }   
+    &__title {
+        font-weight: 600;
+        @include adaptiveClamp(font-size, 25, 20);
+        @include adaptiveClamp(margin-bottom, 11, 9);
+    }
+
+
+    &__body {
+        position: relative;
+        z-index: 1;
+        margin-top: auto;
+        max-width: rem(275);
+    }
+
+    .item-input__input {
+        background: none;
+        border-color: rgba(255, 255, 255, 0.3);
+        color: var(--white-color);
+
+        &::placeholder {
+            color: var(--white-color);
+        }
+    }
+
+    .check-politic__icon {
+        border-color: var(--white-color);
+
+        &::before {
+            filter: grayscale(1) invert(1);
+        }
+    }
+
+    .item-life__fon {
+        @media(max-width:390px){
+            display: flex;
+            align-items: end;
+            justify-content: end;
+            img {
+                max-height: 100%;
+            }
+        }
+    }
+}

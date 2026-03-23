@@ -1,0 +1,187 @@
+.popup {
+  $white-100: #fff;
+
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  overflow-y: auto;
+  pointer-events: none;
+
+  /** Установить свои значения */
+  padding: rem(30) rem(10);
+  background-color: rgba(#000, 50%);
+  z-index: 2000;
+  transition: opacity 0.4s ease-in-out;
+
+  &.is-open {
+    opacity: 1;
+    pointer-events: auto;
+
+    .popup__content {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  // .popup__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+  }
+
+  // .popup__content
+  &__content {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 4px;
+
+    /** Установить свои значения */
+    padding: rem(30) rem(50);
+    max-width: rem(525);
+    background-color: var(--white-color);
+    transform: translateY(rem(-200));
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+
+  // .popup__close
+  &__close {
+    position: absolute;
+
+    /** Установить свои значения */
+    top: rem(20);
+    @include adaptiveClamp(top, -49, -41);
+    right: rem(-27);
+
+    width: rem(24);
+    height: rem(24);
+    border-radius: rem(2);
+    transition: all 0.3s ease  0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--white-color);
+
+    img {
+      width: rem(20);
+      height: rem(20);
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    @media(max-width:500px){
+        right: 0;
+    }
+  }
+}
+
+.popup-form {
+  &__content {
+    @include adaptiveClamp(padding-left, 68, 14);
+    @include adaptiveClamp(padding-right, 68, 14);
+    @include adaptiveClamp(padding-top, 40, 25);
+    @include adaptiveClamp(padding-bottom, 39, 14);
+    @include adaptiveClamp(max-width, 525, 400);
+
+    ._two & {
+      @include adaptiveClamp(max-width, 380, 310);
+      @include adaptiveClamp(padding-left, 50, 14);
+      @include adaptiveClamp(padding-right, 50, 14);
+    }
+
+  }
+  &__body {
+    .dream__title {
+      @include adaptiveClamp(font-size, 40, 27);
+      @include adaptiveClamp(margin-bottom, 8, 5);
+      text-align: center;
+    }
+
+    .dream__text {
+      max-width: rem(357);
+      text-align: center;
+      @include adaptiveClamp(margin-bottom, 15, 14);
+    }
+
+    .forms-mot__btn {
+      max-width: 100%;
+    }
+
+    .dream__row {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      max-width: 100% !important;
+
+    }
+
+    .forms-mot__row {
+      width: 100%;
+      max-width: 100% !important;
+
+      @media(min-width:551px){
+        &:not(._one) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: rem(9);
+        }
+      }
+
+    }
+
+    .check-politic {
+      padding-top: rem(3);
+      margin-right: auto;
+    }
+  }
+}
+
+
+.popup-video {
+
+
+  @media(min-width:501px){
+      @include adaptiveClamp(padding-left, 60, 30);
+    @include adaptiveClamp(padding-right, 60, 30);
+  }
+  &__content {
+    display: flex;
+    padding: 0;
+    background: none;
+    max-width: max-content;
+    // aspect-ratio: 525 / 295.31;
+    
+  }
+
+  &__body {
+    // aspect-ratio: 525 / 295.31;
+    overflow: hidden;
+    
+
+
+    video {
+      border-radius: 4px;
+      background: var(--black-color);
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.5s ease  0s;
+      @include adaptiveClamp(min-height, 200, 160);
+    }
+  }
+}
+
+.popup-thranks {
+  &__content {
+    max-width: rem(400);
+
+    .dream__text {
+      margin-bottom: 0 !important;
+    }
+  }
+}

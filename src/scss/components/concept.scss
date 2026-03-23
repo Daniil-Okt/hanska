@@ -1,0 +1,110 @@
+.concept {
+    position: relative;
+    
+
+    &__body {
+        position: relative;
+        @include adaptiveClamp(padding-top, 72, 36);
+        @include adaptiveClamp(padding-bottom, 72, 36);
+    }
+    &__container {
+        position: relative;
+        z-index: 1;
+
+
+    }
+
+    .priv__head {
+        margin-left: auto;
+        margin-right: auto;
+        color: var(--white-color);
+    }
+    .bs-head__left {
+        @include adaptiveClamp(margin-bottom, 15, 12);
+    }
+
+    .bs-head__title {
+        @include adaptiveClamp(margin-bottom, 11, 5);
+    }
+
+    .priv__up-text {
+        font-weight: 500;
+        @include adaptiveClamp(font-size, 18, 13);
+        margin-bottom: 0;
+    }
+
+    &__row {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include adaptiveClamp(gap, 20, 13);
+
+        @media(max-width:768px){
+            align-items: unset;
+            grid-template-columns: 1fr 1fr;
+        }
+        @media(max-width:550px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .item-life {
+        background: var(--white-color);
+        align-items: center;
+        text-align: center;
+        @include adaptiveClamp(padding-top, 19, 12.75);
+        @include adaptiveClamp(padding-bottom, 23, 13);
+        @include adaptiveClamp(padding-left, 11, 10);
+        @include adaptiveClamp(padding-right, 11, 10);
+
+        @media(max-width:768px){
+            &:last-child {
+                transform: translateX(50%);
+            }
+        }
+        @media(max-width:550px){
+            &:last-child {
+                transform: unset;
+            }
+        }
+		&__icon {
+		}
+
+		&__title {
+		}
+
+		&__text {
+            font-weight: 500;
+            @include adaptiveClamp(margin-bottom, 10, 8);
+		}
+
+		&__bot {
+            margin-top: 0;
+
+            @media(max-width:768px){
+                margin-top: auto;
+            }
+            width: 100%;
+
+            ul {    
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            li {
+                display: inline-block;
+                // min-width: 90%;
+                padding-left: 0 !important; 
+
+                &::before {
+                    position: relative;
+                    @include adaptiveClamp(margin-right, 6, 3);
+                }
+            }
+		}
+    }
+}
+
+

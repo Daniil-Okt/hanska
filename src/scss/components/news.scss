@@ -1,0 +1,121 @@
+.news {
+    @include adaptiveClamp(padding-top, 83, 50);
+
+		&__container {
+		}
+
+		&__row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: rem(14);
+		}
+
+		&__item {
+		}
+
+        .bs-title {
+            @include adaptiveClamp(margin-bottom, 32, 18);
+        }
+
+        &__bot {
+            @include adaptiveClamp(margin-top, 36, 15);
+        }
+
+        &__pagin {
+            display: flex;
+            justify-self: end;
+            @include adaptiveClamp(gap, 8, 6);
+
+            .link {
+                font-weight: 500;
+                @include adaptiveClamp(font-size, 12, 10);
+                line-height: 100%;
+                letter-spacing: -0.02em;
+                color: #9f9f9f;
+                transition: all 0.3s ease  0s;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--t-color);
+                }
+
+                &._active {
+                    position: relative;
+                    color: var(--green-color);
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: rem(1);
+                        background: var(--green-color);
+                        bottom: rem(-1);
+                        left: 0;
+                    }
+                }
+            }
+        }
+}
+
+
+.item-news {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out  0s;
+
+    &:hover {
+        transform: translateY(-3px);
+        img {
+            transform: scale(1.06);
+        }
+    }
+    
+		&__body {
+            border-radius: rem(5) rem(5) 0 0;
+            @include adaptiveClamp(padding-top, 22, 20);
+            @include adaptiveClamp(padding-bottom, 16, 12);
+            @include adaptiveClamp(padding-left, 14, 13);
+            @include adaptiveClamp(padding-right, 14, 13);
+            border-top: rem(1) solid #c6c6c6;
+            border-left: rem(1) solid #c6c6c6;
+            border-right: rem(1) solid #c6c6c6;
+		}
+
+		&__link {
+            @include adaptiveClamp(font-size, 13, 12);
+            color: var(--green-color);
+            @include adaptiveClamp(margin-top, 16, 13);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            transition: all 0.3s ease  0s;
+
+            &:hover {
+                color: var(--t-color);
+            }
+		}
+
+		&__img {
+            border-radius: 0 0 rem(5) rem(5);
+            @include adaptiveClamp(height, 200, 141);
+            overflow: hidden;
+            
+            img {
+                transition: all 0.6s ease-in-out  0s;
+            }
+		}
+
+
+        .item-life {
+
+                &__title {
+                }
+
+                &__text {
+                    font-size: rem(13) !important;
+                }
+
+                &__bot {
+                    font-size: rem(12) !important;
+                }
+        }
+}
+

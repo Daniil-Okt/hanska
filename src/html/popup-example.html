@@ -1,0 +1,124 @@
+<div class="popup popup-video" data-popup="popup-video" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup-video__content popup__content">
+            <button class="popup__close button-close" type="button">
+                <img class="lazy" loading="lazy" data-src="@img/icon-close.svg" alt="">
+            </button>
+            <div class="popup-video__body popup__body">
+                <video class="lazy popup-video__video" controls muted playsinline preload="metadata">
+                    <source  src="" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup popup-form" data-popup="popup-from" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup-form__content popup__content">
+            <button class="popup__close button-close" type="button">
+                <img class="lazy" loading="lazy" data-src="@img/icon-close.svg" alt="">
+            </button>
+
+            <form action="#" class="popup-form__body popup__body">
+                <div class="dream__row">
+                    <h2 class="dream__title bs-title">
+                        остались вопросы?
+                    </h2>
+                    <p class="dream__text">
+                        Оставьте заявку, мы свяжемся с вами в ближайшее время, ответим на все волнующие вопросы 
+                    </p>
+
+                    <div class="fix__row forms-mot__row items-input-row">
+                        <div class="item-input">
+                            <input type="text" name="name" placeholder="Ваше имя" class="item-input__input _req">
+                        </div>
+                        <div class="item-input">
+                            <input type="text" name="phone" placeholder="+7 (999) 999-99-99" class="item-input__input _req _obligat tel">
+                        </div>
+                    </div>
+
+                    <label class="check-politic">
+                        <input type="checkbox" name="politic" class="check-politic__input _req _obligat">
+                        <span class="check-politic__icon"></span>
+                        <span class="check-politic__text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+                    </label>
+
+                    <button type="submit" class="forms-mot__btn btn">Отправить →</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="popup popup-form _two" data-popup="popup-from2" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup-form__content popup__content">
+            <button class="popup__close button-close" type="button">
+                <img class="lazy" loading="lazy" data-src="@img/icon-close.svg" alt="">
+            </button>
+
+            <form action="#" class="popup-form__body popup__body">
+                <div class="dream__row">
+                    <h2 class="dream__title bs-title">
+                        ПРЕЗЕНТАЦИЯ
+                    </h2>
+                    <p class="dream__text">
+                        Где Вам удобно получить презентацию? 
+                    </p>
+
+                    <div class="fix__row forms-mot__row items-input-row _one">
+                        <div class="item-input">
+                            <input type="text" name="phone" placeholder="+7 (999) 999-99-99" class="item-input__input _req _obligat tel">
+                        </div>
+                        <div class="radio-soc">
+                            <label class="radio-soc__label">
+                                <input checked type="radio" name="soc">
+                                <span>Отправьте в Max</span>
+                            </label>
+                            <label class="radio-soc__label">
+                                <input type="radio" name="soc">
+                                <span>Отправьте в Телеграм</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <label class="check-politic">
+                        <input type="checkbox" name="politic" class="check-politic__input _req _obligat">
+                        <span class="check-politic__icon"></span>
+                        <span class="check-politic__text">Я согласен с политикой конфиденциальности и даю согласие на обработку персональных данных.</span>
+                    </label>
+
+                    <button type="submit" class="forms-mot__btn btn">Получить →</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="popup popup-form popup-thranks" data-popup="popup-thranks" data-close-overlay>
+    <div class="popup__wrapper" data-close-overlay>
+        <div class="popup-thranks__content popup__content">
+            <button class="popup__close button-close" type="button">
+                <img class="lazy" loading="lazy" data-src="@img/icon-close.svg" alt="">
+            </button>
+
+            <div class="popup-form__body popup__body">
+                <div class="dream__row">
+                    <h2 class="dream__title bs-title">
+                        Спасибо за заявку!
+                    </h2>
+                    <p class="dream__text">
+                        Мы свяжемся с вами в ближайшее время
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<div style="display: none;" class="popup-thranks__open" data-type="popup-thranks"></div>
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Коттеджный поселок "Ханская Усадьба". Официальный сайт. Казань.'
+  })
+  <body>
+    <div class="wrapper page-white">
+        @@include('html/header.html')
+
+        <main class="page">
+            <div data-observ></div>
+            @@include('html/page-news/desc.html')
+            @@include('html/page-news/last.html')
+            
+        </main>
+
+        @@include('html/footer.html')
+    </div>
+
+    @@include('html/popup-example.html')
+  </body>
+</html>

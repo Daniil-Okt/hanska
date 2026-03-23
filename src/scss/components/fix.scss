@@ -1,0 +1,47 @@
+.fix {
+    .dream__body {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-right: 0 !important;
+        display: flex;
+
+
+    }
+
+    .dream__title {
+        // @include adaptiveClamp(font-size, 47, 27);
+    }
+
+    .dream__row {
+        @include adaptiveClamp(padding-top, 37, 21.5);
+        @include adaptiveClamp(padding-bottom, 36, 19);
+        padding-right: rem(23);
+        width: 100%;
+        max-width: rem(530);
+
+    }
+    .dream__text {
+        max-width: rem(440)
+    }
+
+    .dream__line {
+        @include adaptiveClamp(padding-top, 38, 22.2);
+        @include adaptiveClamp(padding-bottom, 36, 17.2);
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        gap: rem(3);
+        max-width: rem(380);
+    }
+
+    &__img {
+        width: 100%;
+        @include adaptiveClamp(max-width, 589, 200);
+
+        @media(max-width:575px){
+            display: none;
+        }
+    }
+}

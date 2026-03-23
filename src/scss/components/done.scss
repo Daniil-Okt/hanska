@@ -1,0 +1,150 @@
+.done {
+
+		&__container {
+		}
+
+		&__head {
+		}
+
+		&__title {
+		}
+
+		&__text {
+		}
+
+		&__row {
+            display: flex;
+            gap: rem(14);
+            @media(max-width:768px){
+                flex-direction: column-reverse;
+            }
+		}
+
+		&__items {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: rem(14);
+            height: auto;
+		}
+
+        &__btn {
+            height: auto;
+            flex: auto;
+            align-items: center;
+            @include adaptiveClamp(font-size, 13, 12);
+        }
+}
+
+.item-done {
+    
+    @media(min-width:451px){
+        overflow: hidden;
+        &:not(._text) {
+            @include adaptiveClamp(height, 406, 255);
+            // aspect-ratio: 300 / 255;
+        }
+    }
+
+    @include adaptiveClamp(border-radius, 5, 4);
+
+    color: var(--t-color);
+    position: relative;
+
+
+    
+
+		&__fon {
+            @media(max-width:450px){
+                border-radius: rem(4);
+            }
+		}
+
+		&__body {
+            position: absolute;
+            z-index: 1;
+            background-color: var(--white-color);
+            @include adaptiveClamp(left, 83, 5);
+            @include adaptiveClamp(right, 83, 5);
+            bottom: rem(-1);
+            @include adaptiveClamp(padding-bottom, 20, 12);
+            @include adaptiveClamp(padding-left, 20, 12);
+            @include adaptiveClamp(padding-right, 20, 12);
+            @include adaptiveClamp(padding-top, 20, 12);
+            @include adaptiveClamp(border-top-right-radius, 5, 4);
+            @include adaptiveClamp(border-top-left-radius, 5, 4);
+
+            @media(max-width:1050px){
+                @include adaptiveClamp(left, 30, 5);
+                @include adaptiveClamp(right, 30, 5);
+            }
+            @media(max-width:768px){
+                @include adaptiveClamp(left, 183, 5);
+                @include adaptiveClamp(right, 183, 5);
+            }
+            @media(max-width:450px){
+                position: relative;
+                margin-top: rem(-40);
+                border: rem(1) solid var(--green-color);
+                @include adaptiveClamp(border-radius, 5, 4);
+                left: unset !important;
+                right: unset !important;
+            }
+		}
+
+		&__title {
+            @include adaptiveClamp(font-size, 20, 14);
+            @include adaptiveClamp(margin-bottom, 15, 12.4);
+            line-height: 70%;
+            letter-spacing: -0.02em;
+            font-weight: 600;
+            color: var(--t-color);
+		}
+
+		&__row {
+            @include adaptiveClamp(margin-top, 12, 11);
+            display: flex;
+            justify-content: space-between;
+            gap: rem(10);
+            @include adaptiveClamp(margin-bottom, 14, 12);
+            letter-spacing: -0.03em;
+            @include adaptiveClamp(font-size, 14, 12);
+            
+            
+            .gray { 
+                color: #656565;
+                @include adaptiveClamp(padding-left, 11, 9);
+                @include adaptiveClamp(padding-left, 6, 1);
+                @include adaptiveClamp(font-size, 13, 10);
+            }
+		}
+
+		&__btn {
+		}
+
+        &._text {
+            border: rem(0.86) solid #c6c6c6;
+            @include adaptiveClamp(border-radius, 5, 3);
+            @include adaptiveClamp(padding-top, 22, 13);
+            @include adaptiveClamp(padding-bottom, 22, 13);
+            @include adaptiveClamp(padding-left, 19, 10);
+            @include adaptiveClamp(padding-right, 28, 19);
+
+            .item-done__title {
+                @include adaptiveClamp(font-size, 19, 13);
+                @include adaptiveClamp(margin-bottom, 9, 7);
+            }
+
+            .gray {
+                @include adaptiveClamp(font-size, 14, 12);
+            }
+        }
+}
+.line-horiz {
+}
+.sq {
+}
+.gray {
+}
+.btn {
+}

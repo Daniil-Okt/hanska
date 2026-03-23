@@ -1,0 +1,53 @@
+<header class="header">
+  <div class="header__container">
+    <a href="/" class="header__logo logo">
+      <img class="white" src="@img/logo.png" alt="">
+      <img class="green" src="@img/logo-green.png" alt="">
+    </a>
+
+    <div class="header__right">
+
+      <nav class="header__menu menu your-menu" data-da=".header, 1024, last">
+        <button class="menu__close icon-menu">
+          <img loading="lazy" class="lazy" data-src="@img/menu-close.svg" alt="">
+        </button>
+
+        <ul class="menu__list">
+          <li class="menu__item"><a href="page-about.html" class="menu__link">О поселке</a></li>
+          <li class="menu__item"><a target="_blank" rel="nofollow" href="https://map.han-usadba.ru/" class="menu__link">Генплан</a></li>
+          <!-- <li class="menu__item"><a href="#" class="menu__link">Дома</a></li> -->
+          <!-- <li class="menu__item"><a href="#" class="menu__link">Инфраструктура</a></li> -->
+          <!-- <li class="menu__item"><a href="#" class="menu__link">Новости</a></li> -->
+          <li class="menu__item"><a href="page-contact.html" class="menu__link">Контакты</a></li>
+        </ul>
+
+        <div class="menu__btn btn" data-type="popup-from">Записаться на просмотр →</div>
+      </nav>
+
+      <div class="header__info" data-da=".header__menu, 1024, 2">
+        <div class="header__tel">
+          <a href="tel:+78432126333">+7 (843) 212-63-33</a>
+          <p>Офис продаж</p>
+        </div>
+        <div class="header__icons">
+          <a target="_blank" rel="nofollow" href="https://t.me/han_usadba_bot" class="header__icon btn-anim">
+            <img src="@img/icon-tel.svg" alt="">
+          </a>
+          <a target="_blank" rel="nofollow" href="https://max.ru/id166003607892_bot" class="header__icon btn-anim" >
+            <img src="@img/icon-soc.svg" alt="">
+          </a>
+        </div>
+      </div>
+
+      <div class="header__btn btn" data-type="popup-from">
+        Записаться на просмотр
+      </div>
+
+      <a target="_blank" rel="nofollow" href="https://nd.inno-e.ru/han" class="header__icon btn-anim header__ent" data-da=".header__icons, 575, last">
+        <img src="@img/icon-ent.svg" alt="">
+      </a>
+    </div>
+    
+    @@include('./icon-menu.html', {})
+  </div>
+</header>
