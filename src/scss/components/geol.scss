@@ -25,6 +25,7 @@
     @include adaptiveClamp(border-radius, 5, 4);
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 
     &__top {
         @include adaptiveClamp(padding, 19, 11);

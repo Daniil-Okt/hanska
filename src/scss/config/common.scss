@@ -7,7 +7,11 @@
 }
 
 a {
-    user-select: all;
+    /* Запрещает выделение при клике */
+    -webkit-tap-highlight-color: transparent;
+    
+    /* Обычное выделение текста работает по умолчанию */
+    user-select: auto;
 }
 
 .pt-sec {

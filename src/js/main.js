@@ -157,7 +157,7 @@ const swiperNews = new Swiper('.last__slider', {
   spaceBetween: 0,
   slidesPerView: 1,
   modules: [Navigation],
-  loop: true,
+  // loop: true,
   initialSlide: 0,
   autoplay: {
     delay: 2500,
